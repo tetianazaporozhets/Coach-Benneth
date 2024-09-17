@@ -1,0 +1,13 @@
+@import "../../_variables";
+
+.benefits {
+  margin-bottom: 130px;
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    @media screen and (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

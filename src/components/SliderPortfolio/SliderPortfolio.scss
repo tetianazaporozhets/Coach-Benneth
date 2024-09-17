@@ -1,0 +1,47 @@
+@import "../../_variables";
+
+.swiper {
+  overflow: visible;
+}
+.swiper-container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+
+.swiper-wrapper {
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+}
+
+.swiper-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: -30px !important;
+  left: 50% !important;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+}
+.swiper-pagination-bullet {
+  background: $accent-color;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  background: #fff;
+}

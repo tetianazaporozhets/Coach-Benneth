@@ -1,0 +1,26 @@
+@import "../../_variables";
+
+.benefit-card {
+  background: rgb(255 255 255 / 5%);
+  padding: 50px 70px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid $accent-color;
+  &__number {
+    font-size: 50px;
+    line-height: 54px;
+    margin: 0 0 30px 0;
+  }
+  &__title {
+    font-size: 27px;
+    line-height: 31px;
+    margin: 0 0 25px 0;
+  }
+  &__description {
+    margin: 0;
+  }
+}

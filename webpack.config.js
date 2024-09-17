@@ -25,7 +25,14 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
-      patterns: [{ from: "src/static", to: "static" }],
+      patterns: [
+        { from: "src/static", to: "static" },
+        { from: "node_modules/slick-carousel/slick/fonts", to: "fonts" },
+        {
+          from: "node_modules/slick-carousel/slick/ajax-loader.gif",
+          to: "static/images",
+        },
+      ],
     }),
   ],
   module: {
@@ -57,6 +64,13 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/,
+        type: "asset/resource",
+        generator: {
+          filename: "static/images/[name].[contenthash][ext]",
+        },
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
         type: "asset/resource",
         generator: {
           filename: "static/images/[name].[contenthash][ext]",

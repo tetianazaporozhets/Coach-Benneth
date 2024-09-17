@@ -7,12 +7,8 @@ import "../Layout/Layout.scss";
 const Layout = () => {
   return (
     <>
-      <div className="homescreen">
-        <Header />
-        <main>
-          <Outlet />
-        </main>
-      </div>
+      <Header />
+      <Outlet />
       <Footer />
     </>
   );
