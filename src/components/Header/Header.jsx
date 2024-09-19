@@ -1,15 +1,15 @@
 import React from "react";
-import Logo from "../../static/images/logo.svg";
 import SignUp from "../../static/images/sign-up-icon.svg";
 import Cart from "../../static/images/cart-icon.svg";
 import { Link } from "react-router-dom";
 import "./Header.scss";
+import Logo from "../Logo/Logo";
 
 const Header = () => {
   return (
     <header className="header">
       <div className="header__nav-block">
-        <img src={Logo} alt="" />
+        <Logo />
         <nav className="header__navigation">
           <ul className="header__list">
             <li>

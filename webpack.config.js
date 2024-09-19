@@ -25,14 +25,7 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
-      patterns: [
-        { from: "src/static", to: "static" },
-        { from: "node_modules/slick-carousel/slick/fonts", to: "fonts" },
-        {
-          from: "node_modules/slick-carousel/slick/ajax-loader.gif",
-          to: "static/images",
-        },
-      ],
+      patterns: [{ from: "src/static", to: "static" }],
     }),
   ],
   module: {

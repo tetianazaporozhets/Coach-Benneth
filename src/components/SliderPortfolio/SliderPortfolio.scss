@@ -13,7 +13,7 @@
 .swiper-wrapper {
   transition: transform 0.3s ease-in-out;
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: 160px;
 }
 
 .swiper-slide {
@@ -28,7 +28,7 @@
 
 .swiper-pagination {
   position: absolute;
-  bottom: -30px !important;
+  bottom: -40px !important;
   left: 50% !important;
   transform: translateX(-50%);
   display: flex;

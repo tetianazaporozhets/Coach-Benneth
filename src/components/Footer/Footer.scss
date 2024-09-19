@@ -1,3 +1,49 @@
+@import "../../_variables";
+
 .footer {
   color: $text-color;
+  padding: 130px 0;
+  &__social {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__social-icons {
+    display: flex;
+    gap: 25px;
+  }
+  &__links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  &__link {
+    color: $text-color;
+    text-decoration: none;
+  }
+  &__contacts-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+  &__contacts-adress {
+    font-size: 14px;
+    line-height: 18px;
+    width: 152px;
+    margin: 0;
+  }
+  &__copyright {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 300;
+    margin: 0;
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  &__name {
+    margin: 0;
+  }
 }

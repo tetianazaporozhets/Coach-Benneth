@@ -1,7 +1,5 @@
 import React from "react";
 import "./App.scss";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";

@@ -2,15 +2,17 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import "../Layout/Layout.scss";
+import "./Layout.scss";
 
 const Layout = () => {
   return (
-    <>
+    <div className="layout">
       <Header />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       <Footer />
-    </>
+    </div>
   );
 };
 

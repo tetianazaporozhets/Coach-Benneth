@@ -1,0 +1,12 @@
+@import "../../_variables";
+
+.option {
+  background: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  padding: 70px 0;
+  &__subtitle {
+    font-size: 40px;
+    line-height: 44px;
+    margin: 0 0 35px 0;
+  }
+}
