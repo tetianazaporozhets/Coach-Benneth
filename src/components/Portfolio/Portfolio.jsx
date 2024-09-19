@@ -4,7 +4,7 @@ import SliderPortfolio from "../SliderPortfolio/SliderPortfolio";
 
 const Portfolio = () => {
   return (
-    <div className=" portfolio">
+    <div id="portfolio" className=" portfolio">
       <div className="container">
         <h2 className="subtitle">Progress in every frame</h2>
       </div>

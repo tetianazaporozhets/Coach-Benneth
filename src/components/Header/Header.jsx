@@ -1,49 +1,95 @@
 import React from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import SignUp from "../../static/images/sign-up-icon.svg";
 import Cart from "../../static/images/cart-icon.svg";
-import { Link } from "react-router-dom";
 import "./Header.scss";
 import Logo from "../Logo/Logo";
 
 const Header = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleScrollToSection = (id) => {
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: id } });
+    } else {
+      scrollToSection(id);
+    }
+  };
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
-    <header className="header">
+    <header className="header container">
       <div className="header__nav-block">
         <Logo />
         <nav className="header__navigation">
           <ul className="header__list">
             <li>
-              <a className="header__link" href="#home">
+              <Link
+                to="#home"
+                className="header__link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleScrollToSection("home");
+                }}
+              >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="header__link" href="#benefits">
+              <Link
+                to="#benefits"
+                className="header__link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleScrollToSection("benefits");
+                }}
+              >
                 Benefits
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="header__link" href="#portfolio">
+              <Link
+                to="#portfolio"
+                className="header__link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleScrollToSection("portfolio");
+                }}
+              >
                 Portfolio
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="header__link" href="#membership">
+              <Link
+                to="#membership"
+                className="header__link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleScrollToSection("membership");
+                }}
+              >
                 Membership
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
       </div>
       <div className="header__actions">
-        <Link className="header__link header__action-link">
+        <Link to="/signup" className="header__link header__action-link">
           <img src={SignUp} alt="Sign up icon" />
           <span>Sign Up</span>
         </Link>
-        <Link className="header__link ">
+        <Link to="/cart" className="header__link">
           <img src={Cart} alt="Cart icon" />
         </Link>
-        <Link className="header__link">+48 555 444 333</Link>
+        <span className="header__link">+48 555 444 333</span>
       </div>
     </header>
   );

@@ -2,6 +2,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Unbounded", sans-serif;
   color: $text-color;
@@ -47,4 +51,11 @@ body {
 }
 .highlight {
   color: $accent-color;
+}
+
+#benefits,
+#portfolio,
+#membership {
+  padding-top: 130px;
+  margin-top: -130px;
 }

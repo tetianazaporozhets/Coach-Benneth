@@ -3,19 +3,20 @@ import "./App.scss";
 import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
-import Benefits from "./components/Benefits/Benefits";
-import Portfolio from "./components/Portfolio/Portfolio";
-import Membership from "./components/Membership/Membership";
+import SignUp from "./pages/SignUp/SignUp";
+import Cart from "./pages/Cart/Cart";
 
 function App() {
   return (
     <div className="app">
       <Routes>
-        <Route path="/" element={<Layout />} />
-        <Route index element={<Home />} />
-        <Route path="benefits" element={<Benefits />} />
-        <Route path="portfolio" element={<Portfolio />} />
-        <Route path="membership" element={<Membership />} />
+        {/* Layout как общий родительский компонент */}
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} /> {/* Главная страница */}
+          <Route path="signup" element={<SignUp />} />{" "}
+          {/* Страница регистрации */}
+          <Route path="cart" element={<Cart />} /> {/* Страница корзины */}
+        </Route>
       </Routes>
     </div>
   );

@@ -4,7 +4,7 @@ import "./Membership.scss";
 
 const Membership = () => {
   return (
-    <div className="container">
+    <div id="membership" className="container">
       <h2 className="subtitle">Pick your plan</h2>
       <div className="membership__block">
         <MembershipCard />

@@ -16,6 +16,12 @@
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     padding-bottom: 50px;
+    border: 1px solid $accent-color;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    &:hover {
+      transform: (scale(1.05));
+      box-shadow: 0px 0px 17px 0px rgba(146, 252, 129, 1);
+    }
   }
   &__subtitle {
     font-size: 30px;
@@ -25,7 +31,7 @@
   }
   &__price-box {
     background: rgb(255 255 255 / 5%);
-    padding: 70px;
+    padding: 50px;
   }
   &__price {
     font-size: 40px;

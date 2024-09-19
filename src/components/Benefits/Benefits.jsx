@@ -71,7 +71,7 @@ const benefits = [
 
 const Benefits = () => {
   return (
-    <div className="container benefits">
+    <div id="benefits" className="container benefits">
       <h2 className="subtitle">Boost your performance</h2>
       <div className="benefits__list">
         {benefits.map((benefit, index) => (
