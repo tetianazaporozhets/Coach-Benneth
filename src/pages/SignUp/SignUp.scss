@@ -1,12 +1,8 @@
 @import "/src/_variables";
 
 .registration {
-  background-image: url("../static/images/bg-img.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  width: 100%;
-  position: relative;
-  margin-bottom: 130px;
+  min-height: calc(100vh - 426px);
+  &__subtitle {
+    margin: 0 0 70px 0;
+  }
 }

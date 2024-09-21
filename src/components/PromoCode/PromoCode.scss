@@ -1,0 +1,25 @@
+@import "../../_variables";
+
+.promo-code {
+  margin: 0 0 48px 0;
+  &__input {
+    box-sizing: border-box;
+    border: 1px solid $accent-color;
+    background: rgba(230, 230, 230, 0.1);
+    width: 183px;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 300;
+  }
+  &__btn {
+    width: 85px;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 300;
+    color: $accent-color;
+    background: rgba(230, 230, 230, 0.4);
+    border: 1px solid $accent-color;
+  }
+}

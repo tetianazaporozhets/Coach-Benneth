@@ -5,7 +5,7 @@ import Form from "../../components/Form/Form";
 const SignUp = () => {
   return (
     <div className="registration container">
-      <h2>Sign Up</h2>
+      <h2 className="subtitle registration__subtitle">Sign Up</h2>
       <Form />
     </div>
   );

@@ -1,8 +1,14 @@
 import React from "react";
 import MembershipBtn from "../MembershipBtn/MembershipBtn";
 import "./MembershipCard.scss";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../cartSlice";
+import { useNavigate } from "react-router-dom";
 
 const MembershipCard = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const subscriptions = [
     {
       title: "One-time pass",
@@ -39,6 +45,11 @@ const MembershipCard = () => {
     },
   ];
 
+  const handleAddToCart = (subscription) => {
+    dispatch(addToCart(subscription));
+    navigate("/cart");
+  };
+
   return (
     <div className="membership-card">
       {subscriptions.map((subscription, index) => (
@@ -52,7 +63,6 @@ const MembershipCard = () => {
           </div>
           <ul className="membership-card__list">
             {subscription.benefits.map((benefit, idx) => {
-              // Split the benefit into two parts
               const [title, description] = benefit.split(": ");
               return (
                 <li key={idx} className="membership-card__item">
@@ -61,7 +71,7 @@ const MembershipCard = () => {
               );
             })}
           </ul>
-          <MembershipBtn onClick={() => console.log("Button clicked!")}>
+          <MembershipBtn onClick={() => handleAddToCart(subscription)}>
             {subscription.buttonText}
           </MembershipBtn>
         </div>

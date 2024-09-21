@@ -15,7 +15,7 @@
     align-items: center;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    padding-bottom: 50px;
+    padding-bottom: 40px;
     border: 1px solid $accent-color;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
     &:hover {
@@ -26,12 +26,12 @@
   &__subtitle {
     font-size: 30px;
     line-height: 34px;
-    padding: 50px 70px 0 70px;
-    margin: 0 0 50px 0;
+    padding: 40px 70px 0 70px;
+    margin: 0 0 40px 0;
   }
   &__price-box {
     background: rgb(255 255 255 / 5%);
-    padding: 50px;
+    padding: 40px;
   }
   &__price {
     font-size: 40px;
@@ -45,14 +45,16 @@
   }
   &__list {
     margin: 0;
-    padding: 50px;
+    padding: 40px;
     list-style: none;
   }
   &__item {
+    font-size: 15px;
+    line-height: 19px;
     &:not(:last-child) {
       position: relative;
-      margin: 0 0 25px 0;
-      padding: 0 0 25px 0;
+      margin: 0 0 20px 0;
+      padding: 0 0 20px 0;
       border-bottom: 1px solid $accent-color;
     }
   }

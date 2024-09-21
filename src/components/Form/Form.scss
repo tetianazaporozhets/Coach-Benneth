@@ -7,15 +7,16 @@
 }
 .input {
   box-sizing: border-box;
-  max-width: 690px;
+  background: rgba(230, 230, 230, 0.1);
+  max-width: 700px;
   width: 100%;
-  font-size: 16px;
+  font-size: 15px;
   border: 0.5px solid $accent-color;
-  border-radius: 5px;
-  padding: 15px 25px;
-  margin: 0 0 15px 0;
+  color: $text-color;
+  padding: 16px 25px;
+  margin: 0 0 16px 0;
   &::placeholder {
-    opacity: 0.5;
+    opacity: 0.8;
   }
 }
 
@@ -31,8 +32,10 @@
 //   color: red;
 //   margin: 0;
 // }
-// .field label {
-//   margin: 0 0 7px 0;
-//   display: block;
-//   text-align: left;
-// }
+.field label {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+  text-align: left;
+  margin: 0 0 10px 0;
+}
