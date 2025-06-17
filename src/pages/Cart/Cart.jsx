@@ -3,7 +3,7 @@ import "./Cart.scss";
 import { useDispatch, useSelector } from "react-redux";
 import PromoCode from "../../components/PromoCode/PromoCode";
 import PaymentBtn from "../../components/PaymentBtn/PaymentBtn";
-import { clearCart } from "../../components/cartSlice";
+import ClearCartBtn from "../../components/ClearCartBtn/ClearCartBtn";
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.items);
@@ -25,13 +25,17 @@ const Cart = () => {
       ) : (
         <ul className="cart__list">
           {cartItems.map((item, index) => (
-            <li className="cart__item" key={{ index }}>
+            <li className="cart__item" key={index}>
               <div className="cart__product">
                 <h3 className="cart__title">{item.title}</h3>
                 <p className="cart__price">{item.price}</p>
                 <p className="cart__description">{item.description}</p>
               </div>
               <div className="cart__border"></div>
+              <div className="cart__product">
+                <div className="cart__benefits">{item.benefits}</div>
+                <ClearCartBtn />
+              </div>
             </li>
           ))}
           <div className="cart__payment">
@@ -44,11 +48,7 @@ const Cart = () => {
                 %)
               </p>
             )}
-
             <PaymentBtn />
-            <button onClick={() => dispatch(clearCart())}>
-              Очистить корзину
-            </button>
           </div>
         </ul>
       )}

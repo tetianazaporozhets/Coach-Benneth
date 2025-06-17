@@ -1,0 +1,15 @@
+@import "../../_variables";
+
+.cart__clear-btn {
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+  width: 183px;
+  padding: 21px 21px;
+  background: rgba(230, 230, 230, 0.1);
+  border: 1px solid $accent-color;
+  color: white;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+}

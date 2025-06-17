@@ -1,8 +1,13 @@
 import React from "react";
 import "./PaymentBtn.scss";
+import { Link } from "react-router-dom";
 
 const PaymentBtn = () => {
-  return <button className="payment">Go to payment</button>;
+  return (
+    <Link className="payment" to="/checkout">
+      Go to payment
+    </Link>
+  );
 };
 
 export default PaymentBtn;
