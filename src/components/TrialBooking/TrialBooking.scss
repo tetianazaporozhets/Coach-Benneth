@@ -1,9 +1,26 @@
 @import "../../_variables";
-.layout {
+
+.trial-booking__form {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
-main {
-  flex: 1;
+.trial-booking__form input {
+  box-sizing: border-box;
+  background: rgba(230, 230, 230, 0.1);
+  max-width: 700px;
+  width: 100%;
+  font-size: 15px;
+  border: 0.5px solid #9eff8e;
+  color: white;
+  padding: 16px 25px;
+  margin: 0 0 16px 0;
+}
+.trial-booking__btn {
+  background: #9eff8e;
+  padding: 22px;
+  border: none;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  width: 200px;
 }

@@ -1,1 +1,7 @@
 @import "../../_variables";
+
+.layout {
+  min-height: calc(100vh - 290px);
+  position: relative;
+  padding-bottom: 290px;
+}

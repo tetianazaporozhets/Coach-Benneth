@@ -19,7 +19,7 @@ const TrialBooking = () => {
     }
   };
   return (
-    <form className="trial-booking" onSubmit={handleSubmit}>
+    <form className="trial-booking__form container" onSubmit={handleSubmit}>
       <h2>Book a Free Trial</h2>
 
       <label>Name:</label>
@@ -43,7 +43,9 @@ const TrialBooking = () => {
         placeholderText="Choose date & time"
       />
 
-      <button type="submit">Book Trial</button>
+      <button className="trial-booking__btn" type="submit">
+        Book Trial
+      </button>
     </form>
   );
 };

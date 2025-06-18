@@ -2,6 +2,11 @@
 
 .footer {
   color: $text-color;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 180px;
   padding: 60px 0;
   &__social {
     display: flex;
