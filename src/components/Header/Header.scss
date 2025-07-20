@@ -17,10 +17,17 @@
     gap: 40px;
   }
   &__link {
+    position: relative;
+    display: inline-block;
     color: $text-color;
     text-decoration: none;
+    cursor: pointer;
     font-size: 14px;
     line-height: 18px;
+    &:hover {
+      color: $accent-color;
+      transition: all 0.9s ease;
+    }
   }
   &__actions {
     display: flex;

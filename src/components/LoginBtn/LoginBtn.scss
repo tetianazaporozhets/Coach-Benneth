@@ -1,15 +1,14 @@
 @import "../../_variables";
 
-.payment {
-  background: $btn-gradient;
+.login-btn {
+  width: 150px;
+  cursor: pointer;
+  background: $accent-color;
+  padding: 22px;
   border: none;
-  color: black;
-  text-decoration: none;
-  text-align: center;
+  font-weight: 300;
   font-size: 14px;
   line-height: 18px;
-  font-weight: 300;
-  padding: 21px 21px;
   &:hover {
     background: $btn-gradient-hover;
     transition: all 0.4s ease;

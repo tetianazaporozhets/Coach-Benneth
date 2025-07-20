@@ -6,7 +6,6 @@ import Instagram from "../../static/images/instagram-logo.svg";
 import Youtube from "../../static/images/youtube-logo.svg";
 
 const Footer = () => {
-  console.log("Footer component rendered");
   return (
     <div className="footer container">
       <div className="footer__social">

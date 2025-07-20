@@ -25,6 +25,10 @@
   &__link {
     color: $text-color;
     text-decoration: none;
+    &:hover {
+      color: $accent-color;
+      transition: all 0.9s ease;
+    }
   }
   &__contacts-block {
     display: flex;

@@ -1,6 +1,7 @@
 @import "../../_variables";
 
 .membership-btn {
+  cursor: pointer;
   width: 190px;
   padding: 21px 21px;
   background: $btn-gradient;
@@ -8,4 +9,8 @@
   font-size: 14px;
   font-weight: 300;
   margin-top: auto;
+  &:hover {
+    background: $btn-gradient-hover;
+    transition: all 0.4s ease;
+  }
 }

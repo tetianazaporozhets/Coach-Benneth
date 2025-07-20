@@ -7,6 +7,7 @@ import SignUp from "./pages/SignUp/SignUp";
 import Cart from "./pages/Cart/Cart";
 import CheckoutPage from "./pages/CheckoutPage/CheckoutPage";
 import TrialBooking from "./components/TrialBooking/TrialBooking";
+import "./DatePickerOverrides.scss";
 
 function App() {
   return (

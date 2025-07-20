@@ -1,11 +1,16 @@
 import React from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useState } from "react";
 import SignUp from "../../static/images/sign-up-icon.svg";
+import SignUpHover from "../../static/images/sign-up-icon-hover.svg";
 import Cart from "../../static/images/cart-icon.svg";
+import CartUp from "../../static/images/cart-icon-hover.svg";
 import "./Header.scss";
 import Logo from "../Logo/Logo";
 
 const Header = () => {
+  const [isSignUpHovered, setIsSignUpHovered] = useState(false);
+  const [isCartHovered, setIsCartHovered] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -82,12 +87,25 @@ const Header = () => {
         </nav>
       </div>
       <div className="header__actions">
-        <Link to="/signup" className="header__link header__action-link">
-          <img src={SignUp} alt="Sign up icon" />
+        <Link
+          to="/signup"
+          className="header__link header__action-link"
+          onMouseEnter={() => setIsSignUpHovered(true)}
+          onMouseLeave={() => setIsSignUpHovered(false)}
+        >
+          <img
+            src={isSignUpHovered ? SignUpHover : SignUp}
+            alt="Sign up icon"
+          />
           <span>Sign Up</span>
         </Link>
         <Link to="/cart" className="header__link">
-          <img src={Cart} alt="Cart icon" />
+          <img
+            src={isCartHovered ? CartUp : Cart}
+            alt="Sign up icon"
+            onMouseEnter={() => setIsCartHovered(true)}
+            onMouseLeave={() => setIsCartHovered(false)}
+          />
         </Link>
         <span className="header__link">+48 555 444 333</span>
       </div>
